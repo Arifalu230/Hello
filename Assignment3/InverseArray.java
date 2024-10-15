@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class InverseArray {
+public class SwapArray {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -32,11 +32,15 @@ public class InverseArray {
         int j = arr.length - 1;
         int tmp = 0;
         while (i < j) {
-            tmp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = tmp;
-            i++;
-            j--;
+            if (arr[i] == 0) {
+                i++;
+            } else {
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+                i++;
+                j--;
+            }
         }
     }
 }
