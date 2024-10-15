@@ -6,23 +6,20 @@ public class SampleInput{
         int ans = 0;
         int count = 0;
 
-      for (int i = 0; arr[i] == 0; i++) {
+      for (int i = 0; i < arr.length; i++) {
       
           arr[i] = sc.nextInt();
-          ans = ans + arr[i];
-          if (ans < 1000 || ans > -1000) {
+          if (ans < 0) {
+              arr[i] = sc.nextInt();
+              break;
+            }
             
-              if (ans <= 0) {
-                  break;
-                }
-                count = i;
-          }
-          else{
-            arr[i] = 0;
-          }
+            count = i;
+            ans = ans + arr[i];
+            count = i;
         }
-        for (int j = 0; j < count; j++) {
-            System.out.println("arr"+arr[j]);
+        for (int j = 0; j <= count; j++) {
+            System.out.println("array are"+arr[j]);
 
         }
     }
